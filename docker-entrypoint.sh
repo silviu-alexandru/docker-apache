@@ -26,4 +26,4 @@ sed -i "/127.0.0.1/c\127.0.0.1 localhost localhost.localdomain `hostname`" ~/hos
 cp -f ~/hosts.new /etc/hosts
 chkconfig sendmail on && service sendmail start
 touch /etc/sysconfig/network
-chkconfig httpd on && service httpd start
+chkconfig httpd on && /usr/sbin/httpd -D FOREGROUND
