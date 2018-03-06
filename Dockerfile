@@ -7,7 +7,7 @@ MAINTAINER ProcessMaker CloudOps <cloudops@processmaker.com>
 
 # Extra
 LABEL version="3.2.1"
-LABEL description="ProcessMaker 3.2.2 Docker Container."
+LABEL description="ProcessMaker 3.2.1 Docker Container - Apache"
 
 # Initial steps
 RUN yum clean all && yum install epel-release -y && yum update -y
@@ -30,8 +30,8 @@ RUN yum install \
   -y
   
 # Download ProcessMaker Enterprise Edition
-RUN wget -O "/tmp/processmaker-3.2.2.tar.gz" \
-      "https://artifacts.processmaker.net/official/processmaker-3.2.2.tar.gz"
+RUN wget -O "/tmp/processmaker-3.2.1.tar.gz" \
+      "https://bitnami.processmaker.com/official/processmaker-3.2.1.tar.gz"
 	  
 # Copy configuration files
 COPY pmos.conf /etc/httpd/conf.d
