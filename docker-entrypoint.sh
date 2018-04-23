@@ -23,7 +23,7 @@ chown -R apache. /opt/processmaker
 cp /etc/hosts ~/hosts.new
 sed -i "/127.0.0.1/c\127.0.0.1 localhost localhost.localdomain `hostname`" ~/hosts.new
 cp -f ~/hosts.new /etc/hosts
+touch /etc/sysconfig/network
 chkconfig sendmail on && service sendmail start
 chkconfig mysqld on && service mysqld start
-touch /etc/sysconfig/network
 chkconfig httpd on && /usr/sbin/httpd -D FOREGROUND
