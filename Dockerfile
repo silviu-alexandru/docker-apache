@@ -19,6 +19,8 @@ RUN yum install \
   nano \
   sendmail \
   httpd24 \
+  mysql \
+  mysql-server \
   php56 \
   php56-opcache \
   php56-gd \
