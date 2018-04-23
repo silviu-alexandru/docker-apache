@@ -9,7 +9,6 @@ sed -i '/;date.timezone =/c\date.timezone = America/New_York' /etc/php.ini
 sed -i '/expose_php = On/c\expose_php = Off' /etc/php.ini
 
 # OpCache configurations
-sed -i '/;opcache.enable_cli=0/c\opcache.enable_cli=1' /etc/php.d/10-opcache.ini
 sed -i '/opcache.max_accelerated_files=4000/c\opcache.max_accelerated_files=10000' /etc/php.d/10-opcache.ini
 sed -i '/;opcache.max_wasted_percentage=5/c\opcache.max_wasted_percentage=5' /etc/php.d/10-opcache.ini
 sed -i '/;opcache.use_cwd=1/c\opcache.use_cwd=1' /etc/php.d/10-opcache.ini
