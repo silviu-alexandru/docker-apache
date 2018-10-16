@@ -6,8 +6,8 @@ CMD ["/bin/bash"]
 MAINTAINER ProcessMaker CloudOps <cloudops@processmaker.com>
 
 # Extra
-LABEL version="3.2.3"
-LABEL description="ProcessMaker 3.2.3 Docker Container - Apache"
+LABEL version="3.3.0"
+LABEL description="ProcessMaker 3.3.0 Docker Container - Apache"
 
 # Initial steps
 RUN yum clean all && yum install epel-release -y && yum update -y
@@ -17,21 +17,22 @@ RUN cp /etc/hosts ~/hosts.new && sed -i "/127.0.0.1/c\127.0.0.1 localhost localh
 RUN yum install \
   wget \
   nano \
+  vim \
   sendmail \
   httpd24 \
-  php56 \
-  php56-opcache \
-  php56-gd \
-  php56-mysqlnd \
-  php56-soap \
-  php56-mbstring \
-  php56-ldap \
-  php56-mcrypt \
+  php71 \
+  php71-opcache \
+  php71-gd \
+  php71-mysqlnd \
+  php71-soap \
+  php71-mbstring \
+  php71-ldap \
+  php71-mcrypt \
   -y
   
 # Download ProcessMaker Enterprise Edition
-RUN wget -O "/tmp/processmaker-3.2.3.tar.gz" \
-      "https://artifacts.processmaker.net/official/processmaker-3.2.3.tar.gz"
+RUN wget -O "/tmp/processmaker-3.3.0.tar.gz" \
+      "https://artifacts.processmaker.net/generic/processmaker-3.3.0-build4.tar.gz"
 	  
 # Copy configuration files
 COPY pmos.conf /etc/httpd/conf.d

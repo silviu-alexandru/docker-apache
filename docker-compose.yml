@@ -12,7 +12,7 @@ services:
    processmaker:
      depends_on:
      - mysql
-     image: processmaker/apache:latest
+     image: processmaker/apache:3.3.0
      ports:
        - "80:80"
      restart: always
@@ -26,4 +26,4 @@ networks:
       driver: default
       config:
       -
-        subnet: 172.16.150.0/24
+        subnet: 172.16.170.0/24
