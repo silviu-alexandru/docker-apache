@@ -19,7 +19,6 @@ RUN yum install \
   nano \
   vim \
   sendmail \
-  httpd24 \
   php71 \
   php71-opcache \
   php71-gd \
