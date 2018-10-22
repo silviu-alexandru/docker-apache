@@ -7,7 +7,7 @@ MAINTAINER ProcessMaker CloudOps <cloudops@processmaker.com>
 
 # Extra
 LABEL version="3.3.0"
-LABEL description="ProcessMaker 3.3.0 Docker Container - Apache"
+LABEL description="ProcessMaker 3.3.0 Docker Container - Apache & PHP 7.1"
 
 # Initial steps
 RUN yum clean all && yum install epel-release -y && yum update -y
