@@ -6,8 +6,8 @@ CMD ["/bin/bash"]
 MAINTAINER ProcessMaker CloudOps <cloudops@processmaker.com>
 
 # Extra
-LABEL version="3.5.6"
-LABEL description="ProcessMaker 3.5.6 Docker Container - Apache"
+LABEL version="3.5.7"
+LABEL description="ProcessMaker 3.5.7 CE Docker Container - Apache"
 
 # Declare ARG and ENV Variables
 ARG URL
@@ -40,8 +40,8 @@ RUN yum install \
 RUN echo '' | pecl7 install mcrypt
   
 # Download ProcessMaker Enterprise Edition
-RUN wget -O "/tmp/processmaker-3.5.6.tar.gz" \
-      "https://artifacts.processmaker.net/official/processmaker-3.5.6.tar.gz"
+RUN wget -O "/tmp/processmaker-3.5.7.tar.gz" \
+      "https://sourceforge.net/projects/processmaker/files/ProcessMaker/3.3.10/processmaker-3.5.7-community.tar.gz"
 	  
 # Copy configuration files
 COPY pmos.conf /etc/httpd/conf.d
